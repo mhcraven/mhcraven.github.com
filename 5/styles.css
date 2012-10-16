@@ -187,8 +187,9 @@ span#tel {
 /*Interior page styles*/
 
 #menu {
-	padding: 50px 20px 20px 30px;
+	padding: 50px 20px 0px 30px;
 	background: url(images/menu-border.png) no-repeat top center;
+	
 	}
 
 #menu h1 {
@@ -207,7 +208,13 @@ span#tel {
 .one, .two, .three, .four{
 	float: left;
 	width: 20%;
-	padding: 0% 1.75% 0%;
+	padding: 0% 2% 0%;
+	margin-bottom: 50px;
+}
+
+.price {
+	color: #6a9d57;
+	font-variation: italic;
 }
 
 	
