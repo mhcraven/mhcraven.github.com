@@ -1,0 +1,218 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+html {
+	min-width: 1280px
+	}
+	
+body {
+	font-family: arial;
+	color: #8b7c54;
+	line-height: 1.5em;
+	font-size: 100%;
+	background: url(images/bedge_grunge.png) repeat;
+	
+}
+
+#page {
+	max-width: 1280px;
+	min-width: 1200px;
+	width: 1280px;
+	margin: 0px auto 0px auto;
+	position: relative;
+	background-color: #FFF;
+	}
+	
+header {
+	position: relative;
+	height: 200px;
+	margin-bottom: 30px;
+	}
+
+#site-header h1 a {
+	 display: block;  
+	 width: 259px; 
+	 height: 200px;  
+	 background: url(images/sofra-logo.png) no-repeat 100px 25px;
+	 text-indent: -9999px;
+	}
+
+#acct-signin {
+	float:right;
+	padding-top: 25px;
+	padding-right: 25px
+	}
+
+#textinput {
+	border-radius: 15px;
+	}
+	
+#submit {
+	height: 25px;
+	}
+	
+#top-nav{
+	position: absolute;
+	top: 150px;
+	left: 500px;
+	}
+
+#top-nav li {
+	float: left;
+	list-style-type: none;	
+	font-size: 1.2em;
+	text-align: center;
+	width: 130px;
+	background-color: #4c3906;
+	border-radius: 10px; 
+	padding: 5px;
+	margin-right: 10px;
+
+	}
+
+nav li a {
+	color: #FFF;
+	font-size: .9em;
+	text-decoration: none;
+	padding: 10px 25px;
+	text-align: center;
+	margin: 0 auto; 
+	}
+	
+#middle {
+	width: 1280px;
+	height: 485px;
+	padding-bottom: 30px;
+	border-bottom: 3px solid #fdaf40;
+	}
+
+.rotating-images {
+	clear: both;
+	background: url(images/rotating-images/home-image1.jpg) no-repeat top right;
+	float: left;
+	width: 876px;
+	height: 485px;
+	} 
+
+.callout {
+	background: url(images/frame.png) no-repeat top center;
+	float: right;
+	width: 380px;
+	height: 485px;
+	}
+	
+.callout h1 {
+	font-family: sans-serif;
+	font-size: 1.5em;
+	line-height: 1.65em;
+	padding: 60px 50px;
+	}
+
+	
+#all-news {
+	height: 300px;
+	padding: 30px 20px;
+	background-color: #fef4e9;
+	
+	}
+
+#all-news li {
+	list-style-type: none;
+	}
+
+#all-news h1 {
+	color: #fdaf40;
+	text-shadow: 0.05em 0.05em 0.05em #333;
+	font-variant: small-caps;
+	font-size: 1.5em; 
+	margin-top: .5em;
+	margin-bottom: .5em;
+	}
+	
+#all-news h2 {
+	font-size: .9em;
+	margin-bottom: .2em;
+	}
+	
+#all-news p{
+	font-size: .8em;
+	color: #372707;
+	}
+	
+.daily, .seasonal {
+	float: left;
+	padding-right: 30px;
+	width: 295px;
+	}
+	
+div.classes {
+	float: left;
+	width: 590px;
+	}
+	
+footer { 
+	clear:both;
+	position: relative;
+	font-size: 1em; 
+	color: #372707; 
+	padding: 20px;
+	background: url(images/footer-image.png) no-repeat bottom right;
+	background-color: rgba(253, 175, 64, .5)
+	
+	}
+	
+span#tel {
+	float:right;
+	padding-right: 40px;
+		}
+	
+/*Interior page styles*/
+
+#menu {
+	padding: 50px 20px 20px 30px;
+	background: url(images/menu-border.png) no-repeat top center;
+	}
+
+#menu h1 {
+	color: #fdaf40;
+	text-shadow: 0.05em 0.05em 0.05em #333;
+	font-variant: small-caps;
+	font-size: 1.5em; 
+	margin-top: 1em;
+	margin-bottom: .5em;
+	}
+
+#menu li {
+	list-style-type: none;
+	}
+	
+.one, .two, .three, .four{
+	float: left;
+	width: 20%;
+	padding: 0% 1.75% 0%;
+}
+
+	
+
+a { color: #4c3906; decoration:none; }
+a:hover {color: #fdaf40;}
+
+	
