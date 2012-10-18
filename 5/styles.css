@@ -36,9 +36,12 @@ body {
 	max-width: 1280px;
 	min-width: 1200px;
 	width: 1280px;
-	margin: 0px auto 0px auto;
+	margin: 10px auto 10px auto;
 	position: relative;
 	background-color: #FFF;
+	-webkit-box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
+	-moz-box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
+	box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
 	}
 	
 header {
@@ -82,7 +85,6 @@ header {
 	text-align: center;
 	width: 130px;
 	background-color: #4c3906;
-	border-radius: 10px; 
 	padding: 5px;
 	margin-right: 10px;
 
@@ -95,13 +97,16 @@ nav li a {
 	padding: 10px 25px;
 	text-align: center;
 	margin: 0 auto; 
+	-webkit-transition: 0.4s ease-in-out;
+	-moz-transition: 0.4s ease-in-out;
+	transition: 0.4s ease-in-out;
 	}
 	
 #middle {
 	width: 1280px;
 	height: 485px;
-	padding-bottom: 30px;
-	border-bottom: 3px solid #fdaf40;
+	padding-bottom: 40px;
+	border-bottom: 1px solid #fdaf40;
 	}
 
 .rotating-images {
@@ -129,37 +134,39 @@ nav li a {
 	
 #all-news {
 	height: 300px;
-	padding: 30px 20px;
-	background-color: #fef4e9;
-	
+	padding: 20px 30px 0px 30px;
+	background-color: #f5efe8;
 	}
 
 #all-news li {
 	list-style-type: none;
 	}
 
-#all-news h1 {
-	color: #fdaf40;
+#all-news h1, #menu h1 {
+	color: #4c3906;
 	text-shadow: 0.05em 0.05em 0.05em #333;
 	font-variant: small-caps;
-	font-size: 1.5em; 
-	margin-top: .5em;
-	margin-bottom: .5em;
+	letter-spacing: .1em;
+	font-size: 1.2em; 
+	margin-bottom: .3em;
 	}
 	
 #all-news h2 {
-	font-size: .9em;
-	margin-bottom: .2em;
+	color: #6a9d57;
+	font-size: 1em;
+	margin-bottom: .1em;
 	}
 	
 #all-news p{
-	font-size: .8em;
-	color: #372707;
+	color: #4c3906;
+	font-size: .9em;
+	line-height: 1.3em;
+	margin-bottom: .5em;
 	}
 	
 .daily, .seasonal {
 	float: left;
-	padding-right: 30px;
+	padding-right: 20px;
 	width: 295px;
 	}
 	
@@ -176,7 +183,6 @@ footer {
 	padding: 20px;
 	background: url(images/footer-image.png) no-repeat bottom right;
 	background-color: rgba(253, 175, 64, .5)
-	
 	}
 	
 span#tel {
@@ -189,20 +195,16 @@ span#tel {
 #menu {
 	padding: 50px 20px 0px 30px;
 	background: url(images/menu-border.png) no-repeat top center;
-	
-	}
-
-#menu h1 {
-	color: #fdaf40;
-	text-shadow: 0.05em 0.05em 0.05em #333;
-	font-variant: small-caps;
-	font-size: 1.5em; 
-	margin-top: 1em;
-	margin-bottom: .5em;
 	}
 
 #menu li {
 	list-style-type: none;
+	line-height: 1.2em;
+	padding-bottom: .3em;
+	}
+
+#menu ul {
+	padding-bottom: 2em;
 	}
 	
 .one, .two, .three, .four{
@@ -214,12 +216,13 @@ span#tel {
 
 .price {
 	color: #6a9d57;
-	font-variation: italic;
+	font-size: .7em;
 }
 
 	
 
 a { color: #4c3906; decoration:none; }
-a:hover {color: #fdaf40;}
+a:hover { color: #fdaf40;}
+a:active { background: #6a9d57; }
 
 	

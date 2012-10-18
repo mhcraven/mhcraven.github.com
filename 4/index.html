@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html id="home" lang="en">
 
 
 
@@ -12,17 +12,7 @@
 <script type="text/javascript" src="//use.typekit.net/coo4tea.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
-<style>
-html {
-background: url(images/background-image.jpg) no-repeat center center fixed; 
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-margin: 0px;
-padding: 0px;
-}
-</style>
+
 
 <title> Eldur Vatn Resort
 </title>
@@ -31,50 +21,58 @@ padding: 0px;
 
 <body>
 
-<a href="#"> <img src= "images/eldur-vatn-logo.png" class="logo"> </a>
-
 <header>
-<ul>
-	<strong><li>English</li></strong>
-	<li>Icelandic</li>
-	<li>Francais</li>
-</ul>
-
-<div class="acct-signin">
-<div acct-head>Your Account</div>
-<form>
-<input class="textinput" type="text" onclick="this.value=" value="username" alt="user name">
-</input>
-<input class="textinput" type="text" onclick="this.value=" value="password" alt="password">
-</input>
-</form>
-</div>
+	
+	
+	<div id='logo-container'><a href='#'>Eldur Vatn logo</a>
+	</div>
+		
 
 
+	<div id='header-rt'>
+		<div id='languages'>
+			<ul>
+				<li><a href="#">English</a></li>
+				<li><a href="#">Icelandic</a></li>
+				<li><a href="#">Francais</a></li>
+			</ul>
+		</div>
+
+		<div id='acct-signin'>
+			<div id='acct-head'>Your Account
+			</div>
+			<form>
+					<input class="textinput" type="text" onclick="this.value=" value="username" alt="user name">
+					</input>
+					<input class="textinput" type="text" onclick="this.value=" value="password" alt="password">
+					</input>
+			</form>
+		</div>
+	</div>
+	<div>
+		<a href="chat.html" class="chat-icon">chat with the hotel concierge</a>
+	</div>
+	
 </header>
 
-
 <nav>
-<ul id="top-nav">
-	<li style="border-right: 1px solid #FFF"><a href="relax.html">Relax and Revive</a></li>
-	<li style="border-right: 1px solid #FFF"><a href="see-do.html">See and Do</a></li>
-	<li><a href="stay.html">Stay</a></li>
-</ul>
+	<ul id="top-nav">
+		<li class='rt-border'><a href="relax.html">Relax and Revive</a></li>
+		<li class='rt-border'><a href="#">See and Do</a></li>
+		<li><a href="#">Stay</a></li>
+	</ul>	
 </nav>
 
-
-<aside>
-<a href="chat.html" class="chat-icon">chat with the hotel concierge</a>
-</aside>
-
-
+<section id='main-content'></section>
 
 <footer>
-<ul id="bottom-nav">
-	<li><a href="getting-here.html" class="reset">Getting Here</a></li>
-	<li><a href="privacy.html" class="reset">Privacy Policy</a></li>
-	<li><a href="contact.html" class="reset">Contact Us</a></li>	
-</ul>
+
+	<ul>
+		<li><a href="#">Getting Here</a></li>
+		<li><a href="#">Privacy Policy</a></li>
+		<li><a href="#">Contact Us</a></li>	
+	</ul>
+
 </footer>
 
 </body>
