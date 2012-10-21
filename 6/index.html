@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8" name="exclusive resort" content="width=1280"/>
+<meta name="viewport" content="width=device-width, maximum-scale-1.0, minimum-scale=1.0, initial-scale=1.0" />
+<link href="styles.css" rel="stylesheet" type="text/css" />
+
+<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<script type="text/javascript" src="js/jquery-1.8.2.js"></script>
+<script src="js/jquery.cycle.all.js"></script>
+
+	
+
+
+<title> Sofra Bakery and Cafe
+</title>
+
+</head>
+
+<body>
+	<div id="page">
+		<header id="site-header">
+		 	
+		 	
+		 	<div id='acct-signin'>
+					
+					<form>
+					<div h2="acct-head">Log In
+					</div>
+							<input class="textinput" type="text" onclick="this.value=" value="username" alt="user name">
+							</input>
+							<input class="textinput" type="text" onclick="this.value=" value="password" alt="password">
+							</input>
+							<input id="submit" type="submit" value="GO"></input>
+					</form>
+			</div>
+			<h1><a href="index.html" id="logo">Sofra logo</a></h1>
+		</header>
+		
+		<nav id="top-nav">
+				<ul>
+					<li><a class="nav-link" href="menu.html">Menu</a></li>
+					<li><a class="nav-link" href="#">Order</a></li>
+					<li><a class="nav-link" href="#">Learn</a></li>
+					<li><a class="nav-link" href="#">About</a></li>
+					<li><a class="nav-link" href="#">Contact</a></li>
+				</ul>
+		</nav>
+			
+		<section id="middle">
+		
+			<div id="slideshow">
+				<img src="images/slider-images/home-image1.jpg" width="876px" height="485px" class="first"/>
+				<img src="images/slider-images/home-image2.jpg" width="876px" height="485px"/>
+			    <img src="images/slider-images/home-image3.jpg" width="876px" height="485px"/>
+			    <img src="images/slider-images/home-image4.jpg" width="876px" height="485px"/>
+			    <img src="images/slider-images/home-image5.jpg" width="876px" height="485px"/>
+			</div>
+			<script>
+		      $(document).ready(function() {
+		      $("#slideshow").cycle({
+		          //next: "#slideshow",
+		          //speed: 5000,
+		          //timeout: 200,
+		          //random: 1,
+		          fx: 'fade' 
+		          // transition types, ex: fade, scrollUp, shuffle, etc...
+		       });
+		  });
+		    </script>
+		
+			
+			<div id="callout">
+				<link href='http://fonts.googleapis.com/css?family=Medula+One' rel='stylesheet' type='text/css'>
+				<h2>From the chefs and owners of Oleana, Sofra, a Middle Eastern bakery and cafe. Sofra comes from an anceint Arabic word meaning dining table, picnic, or lilim; it is also a synonym for generosity and hospitality.
+				</h2>
+			</div>
+		
+		</section>
+		
+	
+		<section id="all-news">
+				<div class="news-box daily">
+					<h1>daily specials</h1>
+						<ul>
+							<li><h2>Aenean sollicitudin</h2>
+								<p>lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nib.</p>
+							</li>
+							<li><h2>Duis sed</h2>
+								<p>Oodio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.</p>
+							</li>
+							<li><h2>Nam nec tellus</h2>
+								<p>A odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor.</p>
+							</li>
+						</ul>
+				</div>
+				<div class="news-box seasonal">
+					<h1>seasonal specials</h1>
+						<ul>
+							<li><h2>Aenean sollicitudin</h2>
+								<p>lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nib.</p>
+							</li>
+							<li><h2>Duis sed</h2>
+								<p>Oodio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.</p>
+							</li>
+							<li><h2>Nam nec tellus</h2>
+								<p>A odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor.</p>
+							</li>
+						</ul>
+				</div>
+				<div class="news-box classes">
+					<h1>upcoming classes</h1>
+						<ul>
+							<li><h2>Aenean sollicitudin</h2>
+								<p>Lorem quis bibendum auctor, bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nib.Lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nib.Lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nib.Lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nib.</p>
+							</li>
+							<li><h2>Duis sed</h2>
+								<p>A odio tincidunt auctor a ornare odio. Morbi accumsan ipsum velit. Lorem quis bibendum auctor, quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nib.Lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nib.Lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nib.Lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nib.</p>
+							</li>
+						</ul>
+				</div>
+			</section>
+			
+			<footer>
+				<p>belmont street, cambridge, watertown, ma 02138 <span id="tel">Tel: (617) 666-1234</span></p>
+			</footer>
+	
+		</div>
+		<script>
+    
+        $('#slideshow').cycle({
+          //next: "#slideshow",
+          //speed: 5000,
+          //timeout: 200,
+          //random: 1,
+          fx: 'fade' 
+          // transition types, ex: fade, scrollUp, shuffle, etc...
+        });
+      });     </script>
+	</body>
+</html>
