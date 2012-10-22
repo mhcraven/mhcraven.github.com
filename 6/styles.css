@@ -1,0 +1,271 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+html {
+	min-width: 1280px
+	}
+	
+body {
+	font-family: arial;
+	color: #8b7c54;
+	line-height: 1.5em;
+	font-size: 100%;
+	background: url(images/bedge_grunge.png) repeat;
+	
+}
+
+#page {
+	max-width: 1280px;
+	min-width: 1200px;
+	width: 1280px;
+	margin: 10px auto 10px auto;
+	position: relative;
+	background-color: #FFF;
+	-webkit-box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
+	-moz-box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
+	box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
+	}
+	
+header {
+	position: relative;
+	height: 200px;
+	margin-bottom: 30px;
+	}
+
+	#site-header h1 a {
+		 display: block;  
+		 width: 259px; 
+		 height: 200px;  
+		 background: url(images/sofra-logo.png) no-repeat 100px 25px;
+		 text-indent: -9999px;
+		}
+
+	#acct-signin {
+		float:right;
+		padding-top: 25px;
+		padding-right: 25px
+		}
+
+	#textinput {
+		border-radius: 15px;
+		}
+		
+	#submit {
+		height: 25px;
+		}
+	
+#top-nav{
+	position: absolute;
+	top: 150px;
+	left: 500px;
+	}
+
+	#top-nav li {
+		float: left;
+		list-style-type: none;	
+		font-size: 1.2em;
+		text-align: center;
+		width: 130px;
+		background-color: #4c3906;
+		padding: 5px;
+		margin-right: 10px;
+
+		}
+
+	nav li a {
+		color: #FFF;
+		font-size: .9em;
+		text-decoration: none;
+		padding: 10px 25px;
+		text-align: center;
+		margin: 0 auto; 
+		-webkit-transition: 0.4s ease-in-out;
+		-moz-transition: 0.4s ease-in-out;
+		transition: 0.4s ease-in-out;
+		}
+	
+#middle {
+	width: 1280px;
+	height: 485px;
+	padding-bottom: 40px;
+	border-bottom: 1px solid #fdaf40;
+	}
+
+	#slideshow {
+		float:left;
+		width: 876px;
+		height: 485px;
+		} 
+
+	#callout {
+		float: right;
+		background: url(images/frame.png) no-repeat top center;
+		width: 380px;
+		height: 485px;
+		}
+		
+	#callout h2 {
+		font-family: 'Marcellus', serif;
+		font-size: 1.5em;
+		line-height: 1.7em;
+		padding: 55px 40px;
+		}
+
+	
+#all-news {
+	clear: both;
+	height: 300px;
+	padding: 20px 30px 0px 30px;
+	background-color: #f5efe8;
+	}
+
+	#all-news li {
+		list-style-type: none;
+		}
+
+	#all-news h2, #menu h2 {
+		color: #4c3906;
+		text-shadow: 0.01em 0.03em 0.05em #333;
+		font-variant: small-caps;
+		letter-spacing: .1em;
+		font-size: 1.2em; 
+		margin-bottom: .3em;
+		}
+		
+	#all-news h3, #menu h3 {
+		color: #6a9d57;
+		font-size: 1em;
+		
+		}
+		
+	#all-news p{
+		color: #4c3906;
+		font-size: .9em;
+		line-height: 1.3em;
+		margin-bottom: .5em;
+		}
+		
+	.daily, .seasonal {
+		float: left;
+		padding-right: 20px;
+		width: 295px;
+		}
+		
+	div.classes {
+		float: left;
+		width: 590px;
+		}
+	
+footer { 
+	clear:both;
+	position: relative;
+	font-size: 1em; 
+	color: #372707; 
+	padding: 20px;
+	background: url(images/footer-image.png) no-repeat bottom right;
+	background-color: rgba(253, 175, 64, .5)
+	}
+	
+	span#tel {
+		float:right;
+		padding-right: 40px;
+			}
+		
+/*Interior page styles*/
+
+
+	#menu {
+		padding: 5%;
+		background: url(images/menu-border.png) no-repeat top center;
+		}
+
+	#menu h1 {
+		color: #fdaf40;
+		font-size: 1.5em;
+		}
+
+	#menu h2 {
+		margin-top:.5em;
+	}
+
+	section#menu #favorites h2 {
+		color: #f5efe8;
+		}
+
+
+	#menu li {
+		list-style-type: none;
+		line-height: 1.2em;
+		padding-bottom: .3em;
+		}
+		
+	.one, .two, .three {
+		float: left;
+		width: 20%;
+		margin-right: 3%;
+	}
+
+	.two {
+		margin-bottom: 20px;
+	}
+
+	.four {
+		float: left;
+		width: 30%;
+		margin-bottom: 40px;
+	}
+
+	section#menu #coffee {
+		border: solid 1px #6a9d57;
+		border-radius: 5px;
+		padding: 5px 10px 10px 15px;
+		margin-top: 15px;
+		margin-bottom: 15px;
+
+	}
+	section#menu #daily, #seasonal, #favorites {
+		background-color: #f5efe8;
+		border-radius: 5px;
+		padding: 10px 15px 15px 15px;
+		margin-bottom: 15px;
+	}
+
+	section#menu #favorites {
+		background-color: #6a9d57;
+		color: #fff;
+	}
+
+	section#menu p:last-child {
+		margin-top: 20px;
+	}
+
+	.price {
+		color: #6a9d57;
+		font-size: .7em;
+	}
+
+		
+
+	a { color: #4c3906; decoration:none; }
+	a:hover { color: #fdaf40;}
+	a:active { background: #6a9d57; }
+
+	
