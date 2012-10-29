@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8" name="exclusive resort" content="width=1280"/>
+<meta name="viewport" content="width=device-width, maximum-scale-1.0, minimum-scale=1.0, initial-scale=1.0" />
+<link href="styles.css" rel="stylesheet" type="text/css" />
+
+<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+<script src="js/jquery.cycle.all.js"></script>
+<script src='https://raw.github.com/timrwood/moment/1.7.2/min/moment.min.js'></script>
+<script type='text/javascript' src="js/Eventbrite.jquery.js"></script>
+	
+
+
+<title> Sofra Bakery and Cafe
+</title>
+
+</head>
+
+<body>
+	<div id="page">
+		<header id="site-header">
+		 	
+		 	
+		 	<div id='acct-signin'>
+					
+					<form>
+					<div h2="acct-head">Log In
+					</div>
+							<input id="username" type="text" onclick="this.value=" value="username" alt="username">
+							</input>
+							<input id="password" type="text" onclick="this.value=" value="password" alt="password">
+							</input>
+							<input id="submit" type="submit" value="GO"></input>
+					</form>
+				<script>
+				var usernameField = document.getElementById("username");
+
+				usernameField.onfocus = function() {
+					if ( usernameField.value == "username") {
+						usernameField.value = "";
+					}
+				};
+
+				usernameField.onblur = function() {
+					if ( usernameField.value == "") {
+					usernameField.value = "username";
+					}
+				};
+
+				var passwordField = document.getElementById("password");
+
+				passwordField.onfocus = function() {
+					if ( passwordField.value == "password") {
+						passwordField.value = "";
+					}
+				};
+
+				passwordField.onblur = function() {
+					if ( passwordField.value == "") {
+					passwordField.value = "password";
+					}
+				};
+
+
+				</script>
+				
+
+			</div>
+			<h1><a href="index.html" id="logo">Sofra logo</a></h1>
+		</header>
+		
+		<nav id="top-nav">
+				<ul>
+					<li><a class="nav-link" href="menu.html">Menu</a></li>
+					<li><a class="nav-link" href="#">Order</a></li>
+					<li><a class="nav-link" href="#">Learn</a></li>
+					<li><a class="nav-link" href="#">About</a></li>
+					<li><a class="nav-link" href="#">Contact</a></li>
+				</ul>
+		</nav>
+			
+		<section id="middle">
+		
+			<div id="slideshow">
+				<img src="images/slider-images/home-image1.jpg" width="876px" height="485px" class="first"/>
+				<img src="images/slider-images/home-image2.jpg" width="876px" height="485px"/>
+			    <img src="images/slider-images/home-image3.jpg" width="876px" height="485px"/>
+			    <img src="images/slider-images/home-image4.jpg" width="876px" height="485px"/>
+			    <img src="images/slider-images/home-image5.jpg" width="876px" height="485px"/>
+			</div>
+			<script>
+		      $(document).ready(function() {
+		      $("#slideshow").cycle({
+		          next: "#slideshow",
+		          speed: 2000,
+		          //timeout: 200,
+		          //random: 1,
+		          fx: 'fade' 
+		          
+		       });
+		  });
+		    </script>
+		
+			
+			<div id="callout">
+			<link href='http://fonts.googleapis.com/css?family=Marcellus' rel='stylesheet' type='text/css'>
+				<h2>From the chefs and owners of Oleana, Sofra, a Middle Eastern bakery and cafe. Sofra comes from an anceint Arabic word meaning dining table, picnic, or lilim; it is also a synonym for generosity and hospitality.
+				</h2>
+			</div>
+		
+		</section>
+		
+		<section id="all-news">
+				<div class="daily">
+					<h2>twitter newsfeed</h2>
+						<ul id="tweets"></ul>
+							<a href="https://twitter.com/sofrabakery" class="twitter-follow-button" data-show-count="false">Follow @sofrabakery</a>
+						
+						<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];
+							if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="http://platform.twitter.com/widgets.js";
+						fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+						</script>
+						
+				</div>
+						<script>
+							$(document).ready(function() {
+
+								var username = "sofrabakery";
+								var count = 10;
+								var query = "sofrabakery";
+								var url="http://search.twitter.com/search.json?q=" + query +
+								"&rpp=5&include_entities=true&result_type=mixed&callback=?";
+
+								$.getJSON('https://api.twitter.com/1/statuses/user_timeline.json?screen_name=' + username + '&amp;callback=?',
+								 
+								 function(data) {
+
+						           	$.each(data,function() {
+
+						              var tweet = this;
+						              var user = "sofrabakery";
+						              var li = $("<li>").addClass("tweets");
+						              var date = moment(tweet.created_at);
+
+						            $("<h3>")
+						                 .text(date.fromNow())
+						                 .addClass("tweetDate")
+						                 .appendTo(li);
+									
+
+						            $("<p>")
+						                 .text(tweet.text)
+						                 .addClass("tweetText")
+						                 .appendTo(li);
+
+						             li.appendTo("#tweets");
+						
+						             console.log("tweets");
+
+						             });
+						           	
+
+
+						         	});
+								});
+						     
+							
+							</script>
+
+							
+
+				<div class="seasonal">
+					<h2>seasonal specials</h2>
+						<ul>
+							<li><h3>Zucchini pancake</h3>
+								<p>Zucchini pancake with feta, labne, and tomatoe</p>
+							</li>
+							<li><h3>Sabich</h3>
+								<p>A cold Israeli Sandwich with eggplant, amba, hummus, cucumber, hard boliled egg</p>
+							</li>
+							<li><h3>Sienna Farms salad</h3>
+								<p>A odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor.</p>
+							</li>
+						</ul>
+				</div>
+				<div class="classes">
+					<h2>upcoming classes</h2>
+						<ul>
+							<li><h3>Breaking the Rules Baking Class</h3>
+								
+									<li><span class="when">When:</span> Monday, October 29, 2012 from 6:30 PM to 9 PM</li>
+								    <li><span class="where">Where:</span> Sofra Bakery & Café, 1 Belmont St, Cambridge, MA 02138</li>
+									<li><span class="host">Hosted By:</span> Janice Goldsmith / Cooking Class Coordinator</li>
+ 									<li><p class="register-one">Register for this event now at: <a href=
+ 								"http://ehchocolatier-eorg.eventbrite.com/#" alt="Eventbrite link">Eventbrite.com</a></p></li>
+						</ul>
+						<ul>
+							<li><h3>EH Chocolatier Bonbon Class</h3>
+								
+									<li><span class="when">When:</span> Monday, November 5, 2012 from 6:30 PM to 9 PM</li>
+								    <li><span class="where">Where:</span> Sofra Bakery & Café, 1 Belmont St, Cambridge, MA 02138</li>
+									<li><span class="host">Hosted By:</span> Janice Goldsmith / Cooking Class Coordinator</li>
+ 									<li><p class="register-two">Register for this event now at: <a href=
+ 								"http://ehchocolatier-eorg.eventbrite.com/#" alt="Eventbrite link">Eventbrite.com</a></p></li>
+						</ul>
+
+				</div>
+				
+			</section>
+			
+			<footer>
+				<p>belmont street, cambridge, watertown, ma 02138 <span id="tel">Tel: (617) 666-1234</span></p>
+			</footer>
+	
+		</div>
+		
+	</body>
+</html>
