@@ -13,10 +13,7 @@
 <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
 <script src="js/jquery.cycle.all.js"></script>
 <script src='https://raw.github.com/timrwood/moment/1.7.2/min/moment.min.js'></script>
-<script type='text/javascript' src="js/Eventbrite.jquery.js"></script>
 	
-
-
 <title> Sofra Bakery and Cafe
 </title>
 
@@ -25,53 +22,47 @@
 <body>
 	<div id="page">
 		<header id="site-header">
-		 	
-		 	
-		 	<div id='acct-signin'>
+
+					<form id='acct-signin'>
+					<legend id="acct-head">Log In</legend>
 					
-					<form>
-					<div h2="acct-head">Log In
-					</div>
 							<input id="username" type="text" onclick="this.value=" value="username" alt="username">
 							</input>
 							<input id="password" type="text" onclick="this.value=" value="password" alt="password">
 							</input>
 							<input id="submit" type="submit" value="GO"></input>
 					</form>
-				<script>
-				var usernameField = document.getElementById("username");
+					<script>
+					var usernameField = document.getElementById("username");
 
-				usernameField.onfocus = function() {
-					if ( usernameField.value == "username") {
-						usernameField.value = "";
-					}
-				};
+					usernameField.onfocus = function() {
+						if ( usernameField.value == "username") {
+							usernameField.value = "";
+						}
+					};
 
-				usernameField.onblur = function() {
-					if ( usernameField.value == "") {
-					usernameField.value = "username";
-					}
-				};
+					usernameField.onblur = function() {
+						if ( usernameField.value == "") {
+						usernameField.value = "username";
+						}
+					};
 
-				var passwordField = document.getElementById("password");
+					var passwordField = document.getElementById("password");
 
-				passwordField.onfocus = function() {
-					if ( passwordField.value == "password") {
-						passwordField.value = "";
-					}
-				};
+					passwordField.onfocus = function() {
+						if ( passwordField.value == "password") {
+							passwordField.value = "";
+						}
+					};
 
-				passwordField.onblur = function() {
-					if ( passwordField.value == "") {
-					passwordField.value = "password";
-					}
-				};
+					passwordField.onblur = function() {
+						if ( passwordField.value == "") {
+						passwordField.value = "password";
+						}
+					};
+					</script>
+			
 
-
-				</script>
-				
-
-			</div>
 			<h1><a href="index.html" id="logo">Sofra logo</a></h1>
 		</header>
 		
@@ -118,64 +109,68 @@
 		
 		<section id="all-news">
 				<div class="daily">
-					<h2>twitter newsfeed</h2>
-						<ul id="tweets"></ul>
-							<a href="https://twitter.com/sofrabakery" class="twitter-follow-button" data-show-count="false">Follow @sofrabakery</a>
-						
-						<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];
-							if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="http://platform.twitter.com/widgets.js";
-						fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
-						</script>
-						
+						<h2>twitter newsfeed</h2>
+							<div id="tweets-container">
+								<ul id="tweets" class"scroll-pane"></ul>
+								
+									<script>
+									$(document).ready(function() {
+
+										var username = "sofrabakery";
+										var count = 10;
+										var query = "sofrabakery";
+										var url="http://search.twitter.com/search.json?q=" + query +
+										"&rpp=5&include_entities=true&result_type=mixed&callback=?";
+
+										$.getJSON('https://api.twitter.com/1/statuses/user_timeline.json?screen_name=' + username + '&amp;callback=?',
+										 
+										 function(data) {
+
+								           	$.each(data,function() {
+
+								              var tweet = this;
+								              var user = "sofrabakery";
+								              var li = $("<li>").addClass("tweets");
+								              var date = moment(tweet.created_at);
+
+								            $("<h3>")
+								                 .text(date.fromNow())
+								                 .addClass("tweetDate")
+								                 .appendTo(li);
+											
+
+								            $("<p>")
+								                 .text(tweet.text)
+								                 .addClass("tweetText")
+								                 .appendTo(li);
+
+								             li.appendTo("#tweets");
+								
+								             console.log("tweets");
+
+								             });
+								           	
+
+
+								         	});
+										});
+									  </script>
+
+										<script>
+										$(function()
+										
+										{
+											$('.scroll-pane').jScrollPane();
+											
+										});
+										</script>
+
+
+
+							</div>	
 				</div>
-						<script>
-							$(document).ready(function() {
 
-								var username = "sofrabakery";
-								var count = 10;
-								var query = "sofrabakery";
-								var url="http://search.twitter.com/search.json?q=" + query +
-								"&rpp=5&include_entities=true&result_type=mixed&callback=?";
-
-								$.getJSON('https://api.twitter.com/1/statuses/user_timeline.json?screen_name=' + username + '&amp;callback=?',
-								 
-								 function(data) {
-
-						           	$.each(data,function() {
-
-						              var tweet = this;
-						              var user = "sofrabakery";
-						              var li = $("<li>").addClass("tweets");
-						              var date = moment(tweet.created_at);
-
-						            $("<h3>")
-						                 .text(date.fromNow())
-						                 .addClass("tweetDate")
-						                 .appendTo(li);
-									
-
-						            $("<p>")
-						                 .text(tweet.text)
-						                 .addClass("tweetText")
-						                 .appendTo(li);
-
-						             li.appendTo("#tweets");
-						
-						             console.log("tweets");
-
-						             });
-						           	
-
-
-						         	});
-								});
-						     
-							
-							</script>
-
-							
-
-				<div class="seasonal">
+			<div class="seasonal">
 					<h2>seasonal specials</h2>
 						<ul>
 							<li><h3>Zucchini pancake</h3>
@@ -211,6 +206,13 @@
 						</ul>
 
 				</div>
+
+					<div id="twit-but-container">
+						<a href="https://twitter.com/sofrabakery" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @sofrabakery</a>
+						<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="http://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>	
+					</div>
+					
+	
 				
 			</section>
 			

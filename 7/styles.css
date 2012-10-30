@@ -137,20 +137,31 @@ header {
 #all-news {
 	clear: both;
 	height: 300px;
-	padding: 30px 40px;
+	padding: 30px 40px 40px;
 	background-color: #f5efe8;
 	}
 
-	#all-news .daily, .seasonal {
+	.daily {
+		float: left;
+		width: 400px;
+		height: 260px;
+		}
+
+	.seasonal {
 		float: left;
 		padding-right: 30px;
+		padding-left: 35px;
 		width: 250px;
 		}
 
-	#all-news .classes {
+	.classes {
 		float: left;
 		width: 475px;
 		}
+		
+#twit-but-container {
+	width: 400px;
+	}	
 
 	#all-news li {
 		list-style-type: none;
@@ -162,10 +173,10 @@ header {
 		font-variant: small-caps;
 		letter-spacing: .1em;
 		font-size: 1.2em; 
-		margin-bottom: .3em;
+		margin-bottom: 10px;
 		}
 		
-	#all-news .seasonal h3, .classes h3, .menu h3 {
+	.seasonal h3, .classes h3, .menu h3 {
 		color: #6a9d57;
 		font-size: 1.1em;
 		}
@@ -181,34 +192,30 @@ header {
 		padding-bottom: 1em;
 		}
 
-		#all-news .classes li {
+	.classes li {
 		line-height: 1em;
 		}
 
-	#all-news .daily h3 {
+	.daily h3 {
 		color: #6a9d57;
 		font-size: .9em;
 		}
 
-	#all-news .daily p {
+	.daily p {
 		color: #4c3906;
 		font-size: 1em;
 		line-height: 1.3em;
 		margin-bottom: .5em;
 		}
-
-	#all-news .daily {
-		width: 400px;
+		
+	div #tweets-container {
+		height: 250px;
+		padding-right: 10px;
+		overflow: auto; 
 		}
-
-	/*.twitter-follow-button {
-		padding-top: 20px;
-		}*/
-
-	.tweets { position: relative;  }
-
-	.tweets p a:link, .tweets p a:active, .tweets p a:visited { color: #6fb2cd; text-decoration: none; }
-	.tweets p a:hover  { text-decoration: underline; }
+		
+	#tweets p a:link, #tweets p a:active, .tweets p a:visited { color: #6fb2cd; text-decoration: none; }
+	#tweets p a:hover  { text-decoration: underline; }
 
 	.when, .where, .host {
 		font-weight: bold;
