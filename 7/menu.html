@@ -2,36 +2,32 @@
 <html>
 <head>
 
-<meta charset="UTF-8" name="exclusive resort" content="width=1280"/>
-<meta name="viewport" content="width=device-width, maximum-scale-1.0, minimum-scale=1.0, initial-scale=1.0" />
-<link href="styles.css" rel="stylesheet" type="text/css" />
-<link href="screen_layout_large.css" rel="stylesheet" type="text/css" />
-<link href="css/screen_layout_small.css" rel="stylesheet" type="text/css" media="only creen and (min-width:50px ) and (max-width: 500px )"/>
-<link href="css/screen_layout_medium.css" rel="stylesheet" type="text/css" media="only creen and (min-width:501px ) and (max-width: 800px )"/>
-<!--[if lt IE 9]>
-	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
-<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
-<script src="js/jquery.cycle.all.js"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, maximum-scale-1.0, minimum-scale=1.0, initial-scale=1.0" />
+	<link href="styles.css" rel="stylesheet" type="text/css" />
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+	<script src="js/jquery.cycle.all.js"></script>
 
 
-<title> Sofra Bakery and Cafe
-</title>
+	<title> Sofra Bakery and Cafe
+	</title>
 
 </head>
 
 <body>
 		<div id="page">
 			 <header id="site-header">	
-			 		<form id='acct-signin'>
-						<legend id="acct-head">Log In</legend>
-						
-								<input id="username" type="text" onclick="this.value=" value="username" alt="username">
-								</input>
-								<input id="password" type="text" onclick="this.value=" value="password" alt="password">
-								</input>
-								<input id="submit" type="submit" value="GO"></input>
-					</form>
+		 		<form id='acct-signin'>
+		 			<fieldset>
+					<legend id="acct-head">Log In</legend>				
+							<input id="username" type="text" value="username"/>
+							<input id="password" type="text" value="password"/>
+							<input id="submit" type="submit" value="GO">
+					</fieldset>
+				</form>
 					
 					<script>
 					var usernameField = document.getElementById("username");
@@ -63,8 +59,7 @@
 					};
 					</script>
 			
-				
-			 	<h1><a href="index.html" id="logo"></a></h1>
+			 	<a href="index.html"><h1></h1></a>
 			</header>
 			
 			<nav id="top-nav">
@@ -137,7 +132,7 @@
 							<li>Hummus <span class="price">&mdash;6</span></li>
 							<li>hummus bi tahini with warm olives & pita <span class="price">&mdash;7</span></li>
 							<li>warm buttered hummus with basturma and tomato <span class="price">&mdash;7</span></li>
-							<li>topik—chick pea & potato layered with apricot, pistachios, almonds & greens</span></li>
+							<li>topik—chick pea & potato layered with apricot, pistachios, almonds & greens<span>&mdash;7</span></li>
 							<li>Salad <span class="price">&mdash;7</span></li>
 							<li>Fatouche—romaine, cucumber & radish with crispy pita & sumac <span class="price">&mdash;7</span></li>
 							<li>Soup (changes daily, served with two crick cracks)<span class="price">&mdash;6</span></li>
@@ -227,6 +222,7 @@
 					<div id="favorites">
 						<h2>customer favorites</h2>
 						
+						<ul>
 							<li>“Earthquake Cookies = YUM!
 								Red lentil kofte with zhoug & radicchio slaw = YUM YUM!”
 								<br>
@@ -237,6 +233,7 @@
 								<br>
 								&mdash;gayle e., new york, ny
 							</li>
+						</ul>
 					</div>
 				</div>
 			</section>
