@@ -2,7 +2,7 @@
 <html>
 <head>
 
-<meta charset="UTF-8" name="exclusive resort" content="width=1280"/>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, maximum-scale-1.0, minimum-scale=1.0, initial-scale=1.0" />
 <link href="styles.css" rel="stylesheet" type="text/css" />
 
@@ -10,12 +10,10 @@
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 
-<script type="text/javascript" src="js/jquery-1.8.2.js"></script>
+<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
 <script src="js/jquery.cycle.all.js"></script>
-
+<script src='https://raw.github.com/timrwood/moment/1.7.2/min/moment.min.js'></script>
 	
-
-
 <title> Sofra Bakery and Cafe
 </title>
 
@@ -24,20 +22,46 @@
 <body>
 	<div id="page">
 		<header id="site-header">
-		 	
-		 	
-		 	<div id='acct-signin'>
-					
-					<form>
-					<div h2="acct-head">Log In
-					</div>
-							<input class="textinput" type="text" onclick="this.value=" value="username" alt="user name">
-							</input>
-							<input class="textinput" type="text" onclick="this.value=" value="password" alt="password">
-							</input>
-							<input id="submit" type="submit" value="GO"></input>
-					</form>
-			</div>
+
+				<form id='acct-signin'>
+						<fieldset>
+							<legend id="acct-head">Log In</legend>
+							<input id="username" type="text" value="username"/>
+							<input id="password" type="text" value="password"/>
+							<input id="submit" type="submit" value="GO"/>
+						</fieldset>
+				</form>
+					<script>
+					var usernameField = document.getElementById("username");
+
+					usernameField.onfocus = function() {
+						if ( usernameField.value == "username") {
+							usernameField.value = "";
+						}
+					};
+
+					usernameField.onblur = function() {
+						if ( usernameField.value == "") {
+						usernameField.value = "username";
+						}
+					};
+
+					var passwordField = document.getElementById("password");
+
+					passwordField.onfocus = function() {
+						if ( passwordField.value == "password") {
+							passwordField.value = "";
+						}
+					};
+
+					passwordField.onblur = function() {
+						if ( passwordField.value == "") {
+						passwordField.value = "password";
+						}
+					};
+					</script>
+			
+
 			<h1><a href="index.html" id="logo">Sofra logo</a></h1>
 		</header>
 		
@@ -54,21 +78,21 @@
 		<section id="middle">
 		
 			<div id="slideshow">
-				<img src="images/slider-images/home-image1.jpg" width="876px" height="485px" class="first"/>
-				<img src="images/slider-images/home-image2.jpg" width="876px" height="485px"/>
-			    <img src="images/slider-images/home-image3.jpg" width="876px" height="485px"/>
-			    <img src="images/slider-images/home-image4.jpg" width="876px" height="485px"/>
-			    <img src="images/slider-images/home-image5.jpg" width="876px" height="485px"/>
+				<img src="images/slider-images/home-image1.jpg" width="876" height="485" alt="food" class="first">
+				<img src="images/slider-images/home-image2.jpg" width="876" height="485" alt="food">
+			    <img src="images/slider-images/home-image3.jpg" width="876" height="485" alt="food">
+			    <img src="images/slider-images/home-image4.jpg" width="876" height="485" alt="food">
+			    <img src="images/slider-images/home-image5.jpg" width="876" height="485" alt="food">
 			</div>
 			<script>
 		      $(document).ready(function() {
 		      $("#slideshow").cycle({
-		          //next: "#slideshow",
-		          //speed: 5000,
+		          next: "#slideshow",
+		          speed: 2000,
 		          //timeout: 200,
 		          //random: 1,
 		          fx: 'fade' 
-		          // transition types, ex: fade, scrollUp, shuffle, etc...
+		          
 		       });
 		  });
 		    </script>
@@ -82,47 +106,114 @@
 		
 		</section>
 		
-	
 		<section id="all-news">
-				<div class="news-box daily">
-					<h2>daily specials</h2>
-						<ul>
-							<li><h3>Aenean sollicitudin</h3>
-								<p>lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nib.</p>
-							</li>
-							<li><h3>Duis sed</h3>
-								<p>Oodio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.</p>
-							</li>
-							<li><h3>Nam nec tellus</h3>
-								<p>A odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor.</p>
-							</li>
-						</ul>
+				<div class="daily">
+						<h2>twitter newsfeed</h2>
+							<div id="tweets-container">
+								<ul id="tweets" class="scroll-pane" data-link-color="#cc0000"></ul>
+								
+									<script>
+									$(document).ready(function() {
+
+										var username = "sofrabakery";
+										var count = 10;
+										var query = "sofrabakery";
+										var url="http://search.twitter.com/search.json?q=" + query +
+										"&rpp=5&include_entities=true&result_type=mixed&callback=?";
+
+										$.getJSON('https://api.twitter.com/1/statuses/user_timeline.json?count=2&screen_name=' + username + '&amp;callback=?',
+										 
+										 function(data) {
+
+								           	$.each(data,function() {
+
+								              var tweet = this;
+								              var user = "sofrabakery";
+								              var li = $("<li>").addClass("tweets");
+								              var date = moment(tweet.created_at);
+								              var count = include_rts=1;
+
+								            $("<h3>")
+								                 .text(date.fromNow())
+								                 .addClass("tweetDate")
+								                 .appendTo(li);
+											
+
+								            $("<p>")
+								                 .text(tweet.text)
+								                 .addClass("tweetText")
+								                 .appendTo(li);
+
+								             li.appendTo("#tweets");
+								
+								             console.log("tweets");
+
+								             });
+								           	
+
+
+								         	});
+										});
+									  </script>
+
+										<script>
+										$(function()
+										
+										{
+											$('.scroll-pane').jScrollPane();
+											
+										});
+										</script>
+
+
+
+							</div>	
 				</div>
-				<div class="news-box seasonal">
+
+			<div class="seasonal">
 					<h2>seasonal specials</h2>
 						<ul>
-							<li><h3>Aenean sollicitudin</h3>
-								<p>lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nib.</p>
+							<li><h3>Zucchini pancake</h3>
+								<p>Zucchini pancake with feta, labne, and tomatoe</p>
 							</li>
-							<li><h3>Duis sed</h3>
-								<p>Oodio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.</p>
+							<li><h3>Sabich</h3>
+								<p>A cold Israeli Sandwich with eggplant, amba, hummus, cucumber, hard boliled egg</p>
 							</li>
-							<li><h3>Nam nec tellus</h3>
+							<li><h3>Sienna Farms salad</h3>
 								<p>A odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor.</p>
 							</li>
 						</ul>
 				</div>
-				<div class="news-box classes">
+				<div class="classes">
 					<h2>upcoming classes</h2>
 						<ul>
-							<li><h3>Aenean sollicitudin</h3>
-								<p>Lorem quis bibendum auctor, bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nib.Lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nib.Lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nib.Lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nib.</p>
-							</li>
-							<li><h3>Duis sed</h3>
-								<p>A odio tincidunt auctor a ornare odio. Morbi accumsan ipsum velit. Lorem quis bibendum auctor, quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nib.Lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nib.Lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nib.Lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nib.</p>
-							</li>
+							<li><h3>Breaking the Rules Baking Class</h3>
+								
+									<li><span class="when">When:</span> Monday, October 29, 2012 from 6:30 PM to 9 PM</li>
+								    <li><span class="where">Where:</span> Sofra Bakery & Café, 1 Belmont St, Cambridge, MA 02138</li>
+									<li><span class="host">Hosted By:</span> Janice Goldsmith / Cooking Class Coordinator</li>
+ 									<li><p class="register-one">Register for this event now at: <a href=
+ 								"http://ehchocolatier-eorg.eventbrite.com/#">Eventbrite.com</a></p></li>
 						</ul>
+						<ul>
+							<li><h3>EH Chocolatier Bonbon Class</h3>
+								
+									<li><span class="when">When:</span> Monday, November 5, 2012 from 6:30 PM to 9 PM</li>
+								    <li><span class="where">Where:</span> Sofra Bakery & Café, 1 Belmont St, Cambridge, MA 02138</li>
+									<li><span class="host">Hosted By:</span> Janice Goldsmith / Cooking Class Coordinator</li>
+ 									<li><p class="register-two">Register for this event now at: <a href=
+ 								"http://ehchocolatier-eorg.eventbrite.com/#">Eventbrite.com</a></p></li>
+						</ul>
+
 				</div>
+
+					<div id="twit-but-container">
+						<a href="https://twitter.com/sofrabakery" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @sofrabakery</a>
+						<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="http://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>	
+					</div>
+					
+	
+				
 			</section>
 			
 			<footer>
@@ -130,16 +221,6 @@
 			</footer>
 	
 		</div>
-		<script>
-    
-        $('#slideshow').cycle({
-          //next: "#slideshow",
-          //speed: 5000,
-          //timeout: 200,
-          //random: 1,
-          fx: 'fade' 
-          // transition types, ex: fade, scrollUp, shuffle, etc...
-        });
-      });     </script>
+		
 	</body>
 </html>
