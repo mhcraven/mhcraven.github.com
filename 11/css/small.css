@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+/* Layout Small Screens */
+
+
+html {
+	min-width: 350px;
+	}
+
+	#my-info {
+	float: left;
+	width: 82% ;
+	height: 150px;
+	padding-right: 10%;
+	text-align: right;
+	}
+
+	#name {
+		background-color: #E5FCC2;
+		padding: 3% 4% 5.25% 0%;
+		width: 100%;
+		height: auto;
+	}
+
+	#name p {
+		padding-top: 1%;
+		padding-right: 10%;
+		font-size: 1em;
+	}
+
+	#more-info li {
+		float: right;		
+		}
+
+h1 {
+	font-size: 2em;
+}
+
+li a {
+	float: left;
+	font-size: 1em;
+	color: lightgray;
+	background-color: #333;
+	padding: 5px;
+}
+
+p { 
+font-size: .8em;
+}
+
+

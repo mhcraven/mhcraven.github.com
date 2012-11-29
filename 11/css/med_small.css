@@ -1,0 +1,84 @@
+/* Layout Medium Screens */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+ol, ul, li,
+fieldset, form, label, legend,
+caption, tbody, 
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	color: #000;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/*@media for computer screen*/
+
+html {
+	background-color: #999;
+}
+
+body{
+	max-width: 600px;
+	min-width: 400px;
+}
+
+#my-info {
+	position:relative;
+	width: 100%;
+	max-width: 836px;
+	min-width: 175px;
+	padding: 2%;
+	margin-top: 2%;
+}
+
+#name {
+	float: left;
+	background-color: #E5FCC2;
+	padding: 1% 2% 2% 0%;
+	width: 45%;
+	min-width: 100px;
+	text-align: right;
+	margin: 2% 2% 2% 0%;
+	height: auto;
+}
+
+#more-info {
+	float: right;
+	width: 45%;
+	margin-top: 2%;
+	margin-right: 20%;
+}
+
+#my-work {
+	margin: auto;
+}
+
+p {
+	font-family: 'Cutive Mono', serif;
+	font-size: .8em;
+}
+
+a {
+	text-decoration: none;
+	-webkit-transition: 0.4s ease-in-out;
+	-moz-transition: 0.4s ease-in-out;
+	transition: 0.4s ease-in-out;
+}
+
+li {
+	font-size: 1em;
+	padding-top: 2px;
+	list-style-type: none;	
+}
+
+
