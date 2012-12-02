@@ -1,0 +1,44 @@
+@charset "UTF-8";
+/*@media for computer screen*/
+
+
+#my-info {
+	float: left;
+	position: relative;
+	margin: 5% 0% 0% 0%;
+	width: 35%;
+	max-width: 40%;
+	min-width: 25%
+}
+
+	#more-info {
+		display: none;
+	}
+
+	#more-info-rt {
+		display: inline-block;
+		text-align: right;
+		float: right;
+		width: 55%;
+		margin: 5%;
+		}
+
+		#more-info-rt li {
+			display: inline-block;
+			width: 27%;
+			
+			padding: 0 auto;
+			}
+	
+		#more-info li a{
+			font-size: 1.25em;
+			color: lightgray;
+			padding: 0 auto;
+			}
+
+
+#my-work {
+	position: relative;
+	width: 100%;
+	margin: 4% auto;
+	}

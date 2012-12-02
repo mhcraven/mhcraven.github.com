@@ -1,0 +1,43 @@
+@charset "UTF-8";
+/*@media for computer screen*/
+
+
+
+
+
+#my-work > div {
+	float: left;
+	padding: 2%;
+	margin: 2%;
+	background-color: #FFF;
+	box-shadow: .5px -.5px 20px grey;
+	-webkit-box-shadow: .5px -.5px 20px grey;
+	-moz-box-shadow: .5px -.5px 20px grey;
+	-o-box-shadow: .5px -.5px 20px grey;
+	-ms-box-shadow: .5px -.5px 20px grey;
+}
+
+
+h1 {
+	font-size: 1.4em;
+	font-family: "Quicksand", sans-serif;
+}
+
+h2 {
+	font-family: 'Julius Sans One', sans-serif;
+	color: #45ADA8;
+	font-size: 1.25em;
+	letter-spacing: .1em;
+	font-variant: small-caps;
+	padding-top: 3%;
+	padding-right: 10%;
+}
+
+p {
+	font-size: 1em;
+}
+
+	a:hover {
+			color: #E5FCC2;
+		}
+
