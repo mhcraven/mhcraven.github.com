@@ -1,111 +1,16 @@
 @charset "UTF-8";
 
-/* Layout Small Screens */
+/* CSS for mobile phones */
 
 
-html {
-	min-width: 300px;
+body {
+	min-width: 520px;
 	}
 
-	#my-info {
-	float: left;
-	width: 85% ;
-	height: 150px;
-	padding-right: 10%;
-	text-align: right;
-	}
-
-		#name {
-		
-			padding: 3% 4% 5.25% 0%;
-			width: 100%;
-			height: auto;
-		}
-
-		#name p {
-			font-size: 1em;
-		}
-
-		#tagline {
-			display:none;
-		}
-
-		#tagline-bg {
-			display: block;
-			font-family: 'Cutive Mono', serif;
-			font-size: 1em;
-			letter-spacing: .07em;
-			font-family: 'Julius Sans One', sans-serif; 
-			color: #000;
-		}
-		}
-
-		#more-info {
-			float: right;
-			width: 100%;
-		
-		}
-
-		#more-info li {
-			display: inline-block;
-			float: left;
-			width: 35%;
-			margin: 1% 5%;
-			padding: 3% auto;
-			-webkit-border-radius: 4px;
-			-moz-border-radius: 4px;
-			border-radius: 4px;
-			background-color: #333;
-			}
-	
-		#more-info li a{
-			font-size: 1.25em;
-			color: lightgray;
-			padding: 3% auto;
-			}
-
-			a:hover {
-				color: #E5FCC2;
-
-			}
-
-		#contact {
-			margin: 2%;
-			
-		}
-
-		#about {
-			margin: 2%;
-
-		}
-
-#my-work {
-	width: 90%;
-	float: left;
-	margin-top: 5%;
-}
-	.projwrap-sq {
-		margin: 1%;
-	}
-
-	.projwrap-wide {
-		margin: 1%;
-	}
 
 		.capt {
 			display: none;
 		}
 
-h1 {
-	font-size: 2em;
-}
-
-h2 {
-	font-size: 1em;
-}
-		
-p { 
-	font-size: .8em;
-}
 
 
