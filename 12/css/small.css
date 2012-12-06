@@ -7,7 +7,6 @@ body {
 
 #my-work > div {
 	float: left;
-	margin: 0 auto;
 	background-color: lightgray;
 	box-shadow: none;
 	}
@@ -36,3 +35,17 @@ img {
 .capt {
 		display: none;
 		}
+
+/*CSS for portfolio pages*/
+
+	#my-work h2{
+		font-size: 1em;
+		font-weight: 800;
+		margin: 8% auto 2% 5%;
+		}
+
+	#my-work > p {
+		font-size: 1.25em;
+		margin: 3% auto 5% 5%;
+		}
+

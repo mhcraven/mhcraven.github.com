@@ -58,23 +58,20 @@
 
 /*CSS for portfolio pages*/
 
-#my-work h2{
-	font-size: 1.5em;
-	}
 
-	#my-work h2{
-	float: left;
-	font-size: 1.75em;
-	font-family: "Quicksand", sans-serif;
-	color: #45ADA8;
-	}
+	#my-work h2 {
+		max-width: 100%;
+		min-width: 100%
+		float: left;
+		font-size: 1.75em;
+		font-family: "Quicksand", sans-serif;
+		color: #45ADA8;
+		}
 
-#my-work > p{
-	float:left;
-	max-width: 90%;
-	font-family: 'Cutive Mono', serif;
-	margin: 2% auto;
-	-webkit-hyphens: auto;
-	-moz-hyphens: auto;
-	hyphens: auto;
-	}
+	#my-work > p{
+		float:left;
+		max-width: 90%;
+		min-width: 90%
+		font-family: 'Cutive Mono', serif;
+		margin: 2% auto;
+		}

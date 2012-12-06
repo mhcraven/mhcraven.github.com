@@ -37,14 +37,11 @@
 
 #my-work h2{
 	font-size: 1.25em;
-	font-weight: 700;
-	max-width: 90%;
+	font-weight: 700;ss
 	margin: 4% 0;
 	}
 
 #my-work > p {
 	font-size: 1.25em;
-	max-width: 90%;
-	margin: 0 auto;
-	margin-bottom: 10%;
+	margin: 5% 0 10% 0;
 	}
