@@ -3,40 +3,48 @@
 
 
 #my-info {
-	min-width: 50%;
-}
+	max-width: 55%;
+	min-width: 55%;
+	}
 
 	hr {
-		  height: 2px;
+		height: 2px;
 		}
 
 #more-info-rt {
-		width: 24%;
-		margin: 5%;
-	
+	width: 40%;
+	}
+
+	#more-info-rt li {
+		padding: 2%;
+		width: 70%;
+		text-align: center;
+		background-color: #444;
+		-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+		border-radius: 4px;
 		}
 
-		#more-info-rt li {
-			width: 90%;
-			margin: 5%;
-			padding: 10%;
-			text-align: center;
-			background-color: #444;
-			-webkit-border-radius: 4px;
-			-moz-border-radius: 4px;
-			border-radius: 4px;
-			}
-	
-		#more-info-rt li a{
-			color: lightgray;
-		}
-
-
+#more-info-rt li a {
+	color:lightgray;
+	}
 
 #my-work, #contact-form {
-	clear:both;
-	width: 100%;
+	margin: 8% auto;
 	}
 	
-	
+/*CSS for portfolio pages*/
 
+#my-work h2{
+	font-size: 1.25em;
+	font-weight: 700;
+	max-width: 90%;
+	margin: 4% 0;
+	}
+
+#my-work > p {
+	font-size: 1.25em;
+	max-width: 90%;
+	margin: 0 auto;
+	margin-bottom: 10%;
+	}

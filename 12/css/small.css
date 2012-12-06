@@ -1,16 +1,38 @@
 @charset "UTF-8";
-
 /* CSS for mobile phones */
 
-
 body {
-	min-width: 520px;
+	min-width: 300px;
 	}
 
+#my-work > div {
+	float: left;
+	margin: 0 auto;
+	background-color: lightgray;
+	box-shadow: none;
+	}
 
-		.capt {
-			display: none;
+#my-work {
+	margin: 0 auto;
+	}
+
+img {	
+		border: solid 4px #fff;
+		transform:scale(.9,.9);
+		-ms-transform:scale(.9,.9); /* IE 9 */
+		-moz-transform:scale(.9,.9); /* Firefox */
+		-webkit-transform:scale(.9,.9); /* Safari and Chrome */
+		-o-transform:scale(.9,.9); /* Opera */
+		-webkit-border-radius: 6px;
+		-moz-border-radius: 6px;
+		border-radius: 6px;
+		box-shadow: 1px -1px 20px grey;
+		-webkit-box-shadow: 1px -1px 20px grey;
+		-moz-box-shadow: 1px -1px 20px grey;
+		-o-box-shadow: 1px -1px 20px grey;
+		-ms-box-shadow: 1px -1px 20px grey;
 		}
 
-
-
+.capt {
+		display: none;
+		}

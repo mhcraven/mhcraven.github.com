@@ -1,34 +1,31 @@
 @charset "UTF-8";
 /*@media for ipad screen*/
 
-
-
 #my-info {
 	position: relative;
 	text-align: center;
 	width: 100%;
-	height: 100%;
 	max-width: 100%;
-	min-width: 50%;
-
+	min-width: 80%;
 	transition:all .1s ease-in-out;  
     -o-transition:all .1s ease-in-out;  
     -moz-transition:all .1s ease-in-out;  
     -webkit-transition:all .1s ease-in-out;
-}
+	}
 
 	#name {
-		margin: 5% auto;
-		width: 100%
-		max-width: 75%;
-		transition:all .1s ease-in-out;  
-    	-o-transition:all .1s ease-in-out;  
-    	-moz-transition:all .1s ease-in-out;  
-    	-webkit-transition:all .1s ease-in-out;
+		margin: 4% auto;
+		width: 100%;
+		max-width: 100%;
+		min-width: 80%;
+		transition: all .1s ease-in-out;  
+    	-o-transition: all .1s ease-in-out;  
+    	-moz-transition: all .1s ease-in-out;  
+    	-webkit-transition: all .1s ease-in-out;
 		}
 
 	#tagline {
-		margin: 5% auto;
+		margin: 4% auto;
 		width: 100%
 		}
 
@@ -55,29 +52,35 @@
 			}
 	
 		#more-info li a{
-			font-size: 1em;
-
-			
+			font-size: 1em;			
 			color: lightgray;
-		
 			}
-
 			
-
-		
-
 #my-work {
-  width:100%;
-  margin: 0 auto;
-  padding: 0 auto;
-}
+	margin: 5% auto;
+	width: 100%;
+	max-width: 100%;
+	min-width: 90%;
+	}
 
-
-.capt {
-		display: none;
+	h1 { 
+		font-size: 2em;
+		text-align: center;
 		}
 
-h1 { 
-	font-size: 2.1em;
-	text-align: center;}
+/*CSS for portfolio pages*/
+
+	#my-work h2{
+		font-size: 1.25em;
+		font-weight: 700;
+		max-width: 90%;
+		margin: 4% 0;
+		}
+
+	#my-work > p {
+		font-size: 1.25em;
+		max-width: 90%;
+		margin: 4% 0;
+		}
+
 
